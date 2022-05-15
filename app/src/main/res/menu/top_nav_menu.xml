@@ -4,10 +4,11 @@
 
     <item android:id="@+id/setting_btn"
         android:icon="@drawable/ic_baseline_settings_24"
+        android:title="setting"
         app:showAsAction="always" />
     <item android:title="모드 변경"
         android:id="@+id/modechange" />
-    <item android:title="회원 탈퇴"
-        android:id="@+id/memberout" />
+    <item android:title="내 정보"
+        android:id="@+id/myprofile" />
 
 </menu>

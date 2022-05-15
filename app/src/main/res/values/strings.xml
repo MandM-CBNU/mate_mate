@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">MeetandMeet</string>
-    <string name="title_home">Garden</string>
-    <string name="title_dashboard">Home</string>
-    <string name="title_notifications">flower_INFO</string>
+    <string name="title_garden">Garden</string>
+    <string name="title_home">Home</string>
+    <string name="title_flower_info">flower_INFO</string>
+    <string name="title_my_profile">My_Profile</string>
 </resources>
