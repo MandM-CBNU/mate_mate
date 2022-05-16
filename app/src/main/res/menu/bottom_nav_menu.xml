@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_garden"
+        android:icon="@drawable/ic_baseline_balcony_24"
+        android:title="Garden"/>
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/navigation_flower_info"
+        android:icon="@drawable/ic_baseline_local_florist_24"
+        android:title="flower_INFO"/>
+
+</menu>
