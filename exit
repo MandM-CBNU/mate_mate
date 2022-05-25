@@ -1,0 +1,24 @@
+[33mcommit a63da730b7bda325d4bcddbe81bb0b3fcdda671b[m
+Author: JINY0609 <ok373737@naver.com>
+Date:   Sun May 15 21:39:26 2022 +0900
+
+    Initial commit
+
+[33mcommit 99397ce7de53462cfae00ddb76dc4452bd520a5c[m
+Author: JINY_LI <ok373737@naver.com>
+Date:   Mon May 16 07:19:51 2022 +0900
+
+    Create README.md
+
+[33mcommit fcc80490835d489c98b04f0a5878beb9374a4a32[m
+Author: JINY0609 <ok373737@naver.com>
+Date:   Mon May 16 07:30:18 2022 +0900
+
+    nav_create(1)
+
+[33mcommit 935eb6c8b008d6d7d5cbe4143cffa17b38f6a3fc[m[33m ([m[1;36mHEAD -> [m[1;32mcreatNav[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Merge: fcc8049 99397ce
+Author: JINY0609 <ok373737@naver.com>
+Date:   Mon May 16 07:30:47 2022 +0900
+
+    Merge branch 'main' of https://github.com/JINY0609/mate_mate
