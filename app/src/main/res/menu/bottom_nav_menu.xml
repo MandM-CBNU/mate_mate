@@ -16,4 +16,9 @@
         android:icon="@drawable/ic_baseline_local_florist_24"
         android:title="flower_INFO"/>
 
+    <item
+        android:id="@+id/navigation_calendar"
+        android:icon="@drawable/ic_baseline_calendar_month_24"
+        android:title="Calendar"/>
+
 </menu>
