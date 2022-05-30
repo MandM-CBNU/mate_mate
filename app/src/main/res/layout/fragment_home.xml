@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".HomeFragment">
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -24,8 +24,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="436dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="59dp"
         android:layout_marginEnd="1dp"
@@ -49,7 +49,7 @@
                 android:id="@+id/mainpot1"
                 android:layout_width="wrap_content"
                 android:layout_height="238dp"
-                android:src="@drawable/firstpot"
+                android:src="@drawable/blankpot"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -58,8 +58,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/round_button"
                 android:layout_weight="1"
+                android:background="@drawable/round_button"
                 android:text="Jason"
                 app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
@@ -75,7 +75,7 @@
                 android:id="@+id/mainpot2"
                 android:layout_width="wrap_content"
                 android:layout_height="238dp"
-                android:src="@drawable/forth_1monthpot"
+                android:src="@drawable/thirdpot"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -84,8 +84,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/round_button"
                 android:layout_weight="1"
+                android:background="@drawable/round_button"
                 android:text="Jiny" />
         </LinearLayout>
 
@@ -100,7 +100,7 @@
                 android:id="@+id/mainpot3"
                 android:layout_width="wrap_content"
                 android:layout_height="238dp"
-                android:src="@drawable/thirdpot"
+                android:src="@drawable/secondpot"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -109,19 +109,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/round_button"
                 android:layout_weight="1"
+                android:background="@drawable/round_button"
                 android:text="Londo" />
         </LinearLayout>
 
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/bookmarkbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="10dp"
+        android:layout_gravity="right"
         android:contentDescription="즐거찾기 버튼"
         android:minHeight="48dp"
         android:src="@drawable/ic_baseline_local_florist_24"
@@ -133,7 +134,8 @@
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="202dp"
+        android:layout_marginBottom="100dp"
+        android:layout_gravity="bottom|center"
         android:background="#911B1B"
         android:text="물주기"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -142,4 +144,4 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

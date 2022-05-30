@@ -2,51 +2,42 @@ package com.example.meetandmeet;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
+<<<<<<< HEAD
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import android.widget.Toolbar;
+=======
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+>>>>>>> 678713163f33d7f1c162d00103c243744d5697a7
 
 import com.example.meetandmeet.ui.flower_detail.Flower_DetailFragment;
 import com.example.meetandmeet.ui.home.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-import androidx.viewpager2.adapter.FragmentViewHolder;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
-import com.example.meetandmeet.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
+    BottomNavigationView bottomNavigationView;
 
-private ActivityMainBinding binding;
+    // FrameLayout에 각 메뉴의 Fragment를 바꿔 줌
+    FragmentManager fragmentManager = getSupportFragmentManager();
+    FragmentTransaction fragmentTransaction;
+
+    // 3개의 메뉴에 들어갈 Fragment들
+    HomeFragment homeFragment = new HomeFragment();
+    GardenFragment gardenFragment = new GardenFragment();
+    Flower_InfoFragment flower_infoFragment = new Flower_InfoFragment();
+
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.top_nav_menu,menu);
-        return true;
-    }
-
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.modechange:
-                Toast.makeText(getApplicationContext(),"모드변경 버튼 클릭됨",Toast.LENGTH_LONG).show();
-                break;
-            case R.id.myprofile:
-                binding = ActivityMainBinding.inflate(getLayoutInflater());
-                setContentView(binding.getRoot());
-
-                break;
-        }
-        return true;
-        }
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
+<<<<<<< HEAD
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -80,6 +71,42 @@ private ActivityMainBinding binding;
                 }
             });
         }
-    }
+=======
+        bottomNavigationView = findViewById(R.id.nav_view);
 
+        //첫화면 지정
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.framelayout, homeFragment).commitAllowingStateLoss();
+        //바텀 네비 홈으로 설정
+        bottomNavigationView.setSelectedItemId(R.id.navigation_home);
+
+        // bottomNavigationView의 아이템이 선택될 때 호출될 리스너 등록
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()) {
+                    case R.id.navigation_home:
+                        //fragmentTransaction.replace(R.id.framelayout,homeFragment).commitAllowingStateLoss();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new HomeFragment()).commit();
+                        break;
+                    case R.id.navigation_garden:
+                        //fragmentTransaction.replace(R.id.framelayout,gardenFragment).commitAllowingStateLoss();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new GardenFragment()).commit();
+                        break;
+                    case R.id.navigation_flower_info:
+                        //fragmentTransaction.replace(R.id.framelayout,flower_infoFragment).commitAllowingStateLoss();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new Flower_InfoFragment()).commit();
+                        break;
+                    case R.id.navigation_calendar:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new CalendarFragment()).commit();
+                        break;
+
+                }
+                return true;
+            }
+        });
+
+>>>>>>> 678713163f33d7f1c162d00103c243744d5697a7
+    }
 }
