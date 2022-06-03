@@ -3,12 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BookmarkFragment">
+    tools:context=".Select_PotFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="북마크 창 입니다." />
+        android:text="물줄 사람 선택 화면인데 안필요할듯" />
 
 </FrameLayout>

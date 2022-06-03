@@ -1,17 +1,21 @@
 package com.example.meetandmeet;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ActionMenuView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
+    ActionMenuView actionMenuView;
 
     // FrameLayout에 각 메뉴의 Fragment를 바꿔 줌
     FragmentManager fragmentManager = getSupportFragmentManager();
@@ -42,25 +46,52 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
-                        //fragmentTransaction.replace(R.id.framelayout,homeFragment).commitAllowingStateLoss();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new HomeFragment()).commit();
+                        replaceFragment(new HomeFragment());
                         break;
                     case R.id.navigation_garden:
-                        //fragmentTransaction.replace(R.id.framelayout,gardenFragment).commitAllowingStateLoss();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new GardenFragment()).commit();
+                        replaceFragment(new GardenFragment());
                         break;
                     case R.id.navigation_flower_info:
-                        //fragmentTransaction.replace(R.id.framelayout,flower_infoFragment).commitAllowingStateLoss();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new Flower_InfoFragment()).commit();
+                        replaceFragment(new Flower_InfoFragment());
                         break;
                     case R.id.navigation_calendar:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new CalendarFragment()).commit();
+                        replaceFragment(new CalendarFragment());
                         break;
 
                 }
                 return true;
             }
         });
+    }
 
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.top_nav_menu,menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_myprofile:
+                replaceFragment(new MyProfile_Fragment());
+                return true;
+            case R.id.menu_settings:
+                replaceFragment(new SettingFragment());
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    //프래그먼트 교체 명령어 (프래그먼트에서 하단 메뉴바 없이 다른 프래그먼트로 이동시 사용)
+    public void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        //프래그먼트 화면 전환시 애니매이션
+        //fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right,R.anim.enter_from_right,R.anim.enter_from_right);
+
+        fragmentTransaction.replace(R.id.framelayout, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }
+
