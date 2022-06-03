@@ -12,7 +12,8 @@ public class BookmarkFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.e("Frag","CalendarFragment");
+        Log.e("Frag","BookmarkFragment");
+
         return inflater.inflate(R.layout.fragment_bookmark,container,false);
     }
 }
