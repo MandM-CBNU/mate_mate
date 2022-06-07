@@ -1,5 +1,6 @@
 package com.example.meetandmeet;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.telephony.PhoneNumberFormattingTextWatcher;
@@ -20,6 +21,10 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class HomeFragment extends Fragment {
+    //물주기 버튼 클릭 시 카카오톡 앱 실행하기 위해 선언
+    private Intent intent1;
+    private final String packageName = "com.kakao.talk";
+
     @Nullable
     @Override
     //프레그먼트가 보여줄 뷰의 레아아웃 파일인 fragment_home.xml 문서와 연결되도록 뷰바인딩에서 자동으로 만들어지는 바인딩 클래스를 통해 뷰객체 생성(inflate)
@@ -57,10 +62,12 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        intent1 = getContext().getPackageManager().getLaunchIntentForPackage(packageName);
         waterbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity)getActivity()).replaceFragment(new Select_PotFragment());
+//                ((MainActivity)getActivity()).replaceFragment();
+                HomeFragment.this.startActivity(intent1);
             }
         });
 
