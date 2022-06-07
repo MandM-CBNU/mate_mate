@@ -23,8 +23,8 @@ public class Friends {
         this.phone = email;
     }
 
-    public void setAge(String age) {
-        this.birth = age;
+    public void setAge(String birth) {
+        this.birth = birth;
     }
 
     public String getName() {
@@ -35,7 +35,7 @@ public class Friends {
         return phone;
     }
 
-    public String getAge() {
+    public String getBirth() {
         return birth;
     }
 
@@ -43,8 +43,8 @@ public class Friends {
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
-                ", email='" + phone + '\'' +
-                ", age=" + birth +
+                ", phone='" + phone + '\'' +
+                ", birth=" + birth +
                 '}';
     }
 }

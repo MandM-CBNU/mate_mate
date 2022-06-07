@@ -67,12 +67,12 @@ public class Get_FriendData extends Fragment {
                 result.put("phone", getUserPhone);
                 result.put("birth", getUserBirth);
 
-                writeUser(Integer.toString(i++), getUserName, getUserPhone, getUserBirth);
+                writeFriend(Integer.toString(i++), getUserName, getUserPhone, getUserBirth);
             }
         });
         return rootView;
     }
-    private void writeUser(String userId, String name, String email, String age) {
+    private void writeFriend(String userId, String name, String email, String age) {
         Friends friend = new Friends(name, email, age);
 
         //데이터 저장
@@ -94,11 +94,11 @@ public class Get_FriendData extends Fragment {
 //                        // Commit the transaction
 //                        transaction.commit();
 
-                        Fragment fragment = new HomeFragment();
-
-                        FragmentManager fragmentManager = getParentFragmentManager();
-
-                        fragmentManager.beginTransaction().replace(R.id.fd, fragment).commit();
+//                        Fragment fragment = new HomeFragment();
+//
+//                        FragmentManager fragmentManager = getParentFragmentManager();
+//
+//                        fragmentManager.beginTransaction().replace(R.id.fd, fragment).commit();
 
                     }
                 })
