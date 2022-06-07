@@ -35,7 +35,6 @@ public class Get_FriendData extends Fragment {
     Button save;
     EditText phone, name;
     DatePicker birth;
-    int i = 1; //pk
 
     @Nullable
     @Override
@@ -61,15 +60,15 @@ public class Get_FriendData extends Fragment {
                 Date birth = new Date(birthTime);
                 DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
                 String getUserBirth = dateFormat.format(birth);
-
                 HashMap result = new HashMap<>();
                 result.put("name", getUserName); //키, 값
                 result.put("phone", getUserPhone);
                 result.put("birth", getUserBirth);
 
-                writeFriend(Integer.toString(i++), getUserName, getUserPhone, getUserBirth);
+                writeFriend(Integer.toString(var_friend.i++), getUserName, getUserPhone, getUserBirth);
             }
         });
+
         return rootView;
     }
     private void writeFriend(String userId, String name, String email, String age) {
@@ -94,11 +93,11 @@ public class Get_FriendData extends Fragment {
 //                        // Commit the transaction
 //                        transaction.commit();
 
-//                        Fragment fragment = new HomeFragment();
-//
-//                        FragmentManager fragmentManager = getParentFragmentManager();
-//
-//                        fragmentManager.beginTransaction().replace(R.id.fd, fragment).commit();
+                        Fragment fragment = new HomeFragment();
+
+                        FragmentManager fragmentManager = getParentFragmentManager();
+
+                        fragmentManager.beginTransaction().replace(R.id.fd, fragment).commit();
 
                     }
                 })
