@@ -3,13 +3,13 @@ package com.example.meetandmeet;
 import com.google.firebase.database.IgnoreExtraProperties;
 
 @IgnoreExtraProperties
-public class User {
+public class Friends {
     public String name;
     public String phone;
     public String birth;
 
-    public User() { }
-    public User(String name, String phone, String birth) {
+    public Friends() { }
+    public Friends(String name, String phone, String birth) {
         this.name = name;
         this.phone = phone;
         this.birth = birth;
