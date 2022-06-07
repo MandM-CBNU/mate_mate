@@ -2,11 +2,14 @@ package com.example.meetandmeet;
 
 import android.media.Image;
 import android.os.Bundle;
+import android.telephony.PhoneNumberFormattingTextWatcher;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -17,7 +20,6 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class HomeFragment extends Fragment {
-
     @Nullable
     @Override
     //프레그먼트가 보여줄 뷰의 레아아웃 파일인 fragment_home.xml 문서와 연결되도록 뷰바인딩에서 자동으로 만들어지는 바인딩 클래스를 통해 뷰객체 생성(inflate)
@@ -34,12 +36,24 @@ public class HomeFragment extends Fragment {
         Button mainpo21Btn = (Button) rootView.findViewById(R.id.mainpotBtn2);
         Button mainpo31Btn = (Button) rootView.findViewById(R.id.mainpotBtn3);
         Button waterbtn = (Button)rootView.findViewById(R.id.waterbtn);
+        EditText Phone= (EditText) rootView.findViewById(R.id.edit_phone);
+
+
+        // 연락처 입력시 하이픈(-) 자동 입력
+//        Phone.addTextChangedListener(new PhoneNumberFormattingTextWatcher("KR"));
 
         bookmarkbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ((MainActivity)getActivity()).replaceFragment(new BookmarkFragment());
 
+            }
+        });
+
+        potplusbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((MainActivity)getActivity()).replaceFragment(new Get_FriendData());
             }
         });
 
