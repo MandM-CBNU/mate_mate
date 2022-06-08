@@ -1,8 +1,23 @@
 package com.example.meetandmeet;
+
 import android.icu.lang.UCharacter;
+import android.os.Bundle;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 
-public class itemVO {
+
+public class itemVO{
     int imgResId;
     String name;
     String email;
@@ -15,25 +30,8 @@ public class itemVO {
         this.email = email;
         this.intro = intro;
     }
+}
 
-    //입력받은 숫자의 리스트 생성
-    public static ArrayList<itemVO> createContactsList(int numContacts) {
-        ArrayList<itemVO> contacts = new ArrayList<itemVO>();
-
-        contacts.add(new itemVO(R.drawable.blankpot, "이진희", "ok373737@naver.com", "간단한 소개를 적습니다."));
-        contacts.add(new itemVO(R.drawable.secondpot, "김예진", "ok373737@naver.com", "간단한 소개를 적습니다."));
-        contacts.add(new itemVO(R.drawable.thirdpot, "이예빈", "ok373737@naver.com", "간단한 소개를 적습니다."));
-        contacts.add(new itemVO(R.drawable.firstpot, "장민경", "ok373737@naver.com", "간단한 소개를 적습니다."));
-        contacts.add(new itemVO(R.drawable.forth_1monthpot, "최영재", "ok373737@naver.com", "간단한 소개를 적습니다."));
-        contacts.add(new itemVO(R.drawable.blankpot, "양유정", "ok373737@naver.com", "간단한 소개를 적습니다."));
-        contacts.add(new itemVO(R.drawable.secondpot, "장수민", "ok373737@naver.com", "간단한 소개를 적습니다."));
-        contacts.add(new itemVO(R.drawable.thirdpot, "오수미", "ok373737@naver.com", "간단한 소개를 적습니다."));
-        contacts.add(new itemVO(R.drawable.firstpot, "김신영", "ok373737@naver.com", "간단한 소개를 적습니다."));
-        contacts.add(new itemVO(R.drawable.forth_1monthpot, "이진희", "ok373737@naver.com", "간단한 소개를 적습니다."));
-
-            return contacts;
-        }
-    }
 
 
 
