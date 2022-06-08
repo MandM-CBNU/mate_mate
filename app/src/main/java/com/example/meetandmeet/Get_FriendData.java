@@ -65,7 +65,7 @@ public class Get_FriendData extends Fragment {
                 result.put("phone", getUserPhone);
                 result.put("birth", getUserBirth);
 
-                writeFriend(Integer.toString(var_friend.i++), getUserName, getUserPhone, getUserBirth);
+                writeFriend(Integer.toString(++var_friend.i), getUserName, getUserPhone, getUserBirth);
             }
         });
 
