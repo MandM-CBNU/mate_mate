@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Get_FriendData"
+    android:id="@+id/fd">
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0.3in"
+        android:layout_marginTop="30dp"
+        android:text="친구 ++\n정보 입력"
+        android:textSize="0.24in"
+        android:textColor="@color/purple_200"
+        android:fontFamily="sans-serif-black"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0.3in"
+        android:layout_marginTop="170dp"
+        android:hint="이름" />
+
+    <EditText
+        android:id="@+id/edit_phone"
+        android:inputType="phone"
+        android:maxLength="13"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0.3in"
+        android:layout_marginTop="270dp"
+        android:hint="전화번호"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginLeft="0.3in"
+        android:text="생일"
+        android:textSize="0.11in"/>
+
+    <DatePicker
+        android:id="@+id/birth"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0.3in"
+        android:layout_marginTop="370dp"
+        android:hint="생일"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:layout_marginLeft="1.5in"
+        android:text="저장" />
+
+</RelativeLayout>
