@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.flower_detail.Flower_DetailFragment" />
+        <activity android:name=".Flower_DetailFragment" />
     </application>
 
 </manifest>
