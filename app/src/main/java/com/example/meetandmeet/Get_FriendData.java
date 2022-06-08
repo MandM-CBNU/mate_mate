@@ -71,8 +71,8 @@ public class Get_FriendData extends Fragment {
 
         return rootView;
     }
-    private void writeFriend(String userId, String name, String email, String age) {
-        Friends friend = new Friends(name, email, age);
+    private void writeFriend(String userId, String name, String phone, String birth) {
+        Friends friend = new Friends(name, phone, birth);
 
         //데이터 저장
         mDatabase.child("Friends").child(userId).setValue(friend)

@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -44,9 +45,20 @@ public class BookmarkFragment extends Fragment{
     //프레그먼트가 보여줄 뷰의 레아아웃 파일인 fragment_home.xml 문서와 연결되도록 뷰바인딩에서 자동으로 만들어지는 바인딩 클래스를 통해 뷰객체 생성(inflate)
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @NonNull ViewGroup container, @NonNull Bundle savedInstanceState) {
-        mDatabase1 = FirebaseDatabase.getInstance().getReference(); //DatabaseReference의 인스턴스
 
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_bookmark,container,false);
+
+        RadioButton rbtn=(RadioButton) rootView.findViewById(R.id.markbtn);
+
+        rbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+
+        mDatabase1 = FirebaseDatabase.getInstance().getReference(); //DatabaseReference의 인스턴스
         recyclerView1 = (RecyclerView)rootView.findViewById(R.id.BrecyclerView);
 
         list1 = createBookMrkList();

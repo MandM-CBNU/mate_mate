@@ -19,11 +19,11 @@ public class Friends {
         this.name = name;
     }
 
-    public void setEmail(String email) {
-        this.phone = email;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public void setAge(String birth) {
+    public void setBirth(String birth) {
         this.birth = birth;
     }
 

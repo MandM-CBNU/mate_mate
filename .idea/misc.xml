@@ -45,6 +45,7 @@
         <entry key="..\:/Users/User/mate_2/app/src/main/res/layout/view_item.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/User/mate_2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/User/mate_2/app/src/main/res/menu/top_nav_menu.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/yimso/Downloads/22_OpenSrcSWProPrjClass/mate_mate/app/src/main/res/drawable/selector_radio_btn_bmark.xml" value="0.1" />
         <entry key="..\:/Users/yimso/Downloads/22_OpenSrcSWProPrjClass/mate_mate/app/src/main/res/layout/bookmark.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/yimso/Downloads/22_OpenSrcSWProPrjClass/mate_mate/app/src/main/res/layout/flwr_dialog.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/yimso/Downloads/22_OpenSrcSWProPrjClass/mate_mate/app/src/main/res/layout/fragment_bookmark.xml" value="0.27447916666666666" />
@@ -53,7 +54,7 @@
         <entry key="..\:/Users/yimso/Downloads/22_OpenSrcSWProPrjClass/mate_mate/app/src/main/res/layout/fragment_get_frienddata.xml" value="0.264" />
         <entry key="..\:/Users/yimso/Downloads/22_OpenSrcSWProPrjClass/mate_mate/app/src/main/res/layout/fragment_home.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/yimso/Downloads/22_OpenSrcSWProPrjClass/mate_mate/app/src/main/res/layout/fragment_select__pot.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/yimso/Downloads/22_OpenSrcSWProPrjClass/mate_mate/app/src/main/res/layout/recycler_bookmark_item.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/yimso/Downloads/22_OpenSrcSWProPrjClass/mate_mate/app/src/main/res/layout/recycler_bookmark_item.xml" value="0.4" />
         <entry key="..\:/Users/yimso/Downloads/22_OpenSrcSWProPrjClass/mate_mate/app/src/main/res/layout/recycler_item.xml" value="0.27447916666666666" />
       </map>
     </option>
