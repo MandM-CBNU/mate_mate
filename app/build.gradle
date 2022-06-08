@@ -65,9 +65,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //slidingUpPanel
-    //implementation 'com.sothree.slidinguppanel:library:3.4.0'
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
     //tag 관련
-    //implementation 'com.github.mabbas007:TagsEditText:1.0.5'
+    implementation 'com.github.mabbas007:TagsEditText:1.0.5'
 
     //firebase
     // Import the Firebase BoM
