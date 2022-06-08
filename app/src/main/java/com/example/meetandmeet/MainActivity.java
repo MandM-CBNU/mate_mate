@@ -2,26 +2,49 @@ package com.example.meetandmeet;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
-<<<<<<< HEAD
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import android.widget.Toolbar;
-=======
+
+import android.view.View;
+import android.widget.ActionMenuView;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
->>>>>>> 678713163f33d7f1c162d00103c243744d5697a7
 
 import com.example.meetandmeet.ui.flower_detail.Flower_DetailFragment;
 import com.example.meetandmeet.ui.home.HomeFragment;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import java.net.HttpCookie;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.HashMap;
 
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
+    ActionMenuView actionMenuView;
 
     // FrameLayout에 각 메뉴의 Fragment를 바꿔 줌
     FragmentManager fragmentManager = getSupportFragmentManager();
@@ -37,41 +60,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-<<<<<<< HEAD
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_garden, R.id.navigation_flower_info)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(binding.navView, navController);
-
-        Intent intent=new Intent(getApplicationContext(), Flower_DetailFragment.class);
-        startActivity(intent);
-
-        //main 화분 개수 >3개로 임의 설정
-        Button pot[]=new Button[3];
-        Integer btnId[]={R.id.mainpotBtn1,R.id.mainpotBtn2,R.id.mainpotBtn3};
-        for(int i=0;i<btnId.length;i++){
-            final int index;
-            index=i;
-            pot[index]=(Button) findViewById(btnId[index]);
-            //화분 밑 상세페이지 버튼 클릭 시 동작
-            pot[index].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent=new Intent(getApplicationContext(),Flower_DetailFragment.class);
-                    intent.putExtra("potID",index); //potID 받아옴
-                    //intent.putExtra("potName",btn_text);    //버튼에 쓰여있는 text를 받아오는 방법도 있을 수 있읍
-                }
-            });
-        }
-=======
         bottomNavigationView = findViewById(R.id.nav_view);
 
         //첫화면 지정
@@ -87,26 +75,52 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
-                        //fragmentTransaction.replace(R.id.framelayout,homeFragment).commitAllowingStateLoss();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new HomeFragment()).commit();
+                        replaceFragment(new HomeFragment());
                         break;
                     case R.id.navigation_garden:
-                        //fragmentTransaction.replace(R.id.framelayout,gardenFragment).commitAllowingStateLoss();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new GardenFragment()).commit();
+                        replaceFragment(new GardenFragment());
                         break;
                     case R.id.navigation_flower_info:
-                        //fragmentTransaction.replace(R.id.framelayout,flower_infoFragment).commitAllowingStateLoss();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new Flower_InfoFragment()).commit();
+                        replaceFragment(new Flower_InfoFragment());
                         break;
                     case R.id.navigation_calendar:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new CalendarFragment()).commit();
+                        replaceFragment(new CalendarFragment());
                         break;
 
                 }
                 return true;
             }
         });
+    }
 
->>>>>>> 678713163f33d7f1c162d00103c243744d5697a7
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.top_nav_menu,menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_myprofile:
+                replaceFragment(new MyProfile_Fragment());
+                return true;
+            case R.id.menu_settings:
+                replaceFragment(new SettingFragment());
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    //프래그먼트 교체 명령어 (프래그먼트에서 하단 메뉴바 없이 다른 프래그먼트로 이동시 사용)
+    public void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        //프래그먼트 화면 전환시 애니매이션
+        //fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right,R.anim.enter_from_right,R.anim.enter_from_right);
+
+        fragmentTransaction.replace(R.id.framelayout, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }
+

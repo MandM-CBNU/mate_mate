@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#303030"
     tools:context=".HomeFragment">
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/waterButton"
+        android:id="@+id/potplusbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom|center"
@@ -30,7 +30,7 @@
         android:layout_marginTop="59dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="9dp"
-        android:background="#7BBCDA"
+        android:background="@drawable/campbg"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -49,17 +50,19 @@
                 android:id="@+id/mainpot1"
                 android:layout_width="wrap_content"
                 android:layout_height="238dp"
-                android:src="@drawable/blankpot"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/firstpot"
+
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/mainpotBtn1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/round_button"
+                android:background="@drawable/woodtexture"
                 android:text="Jason"
                 app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
@@ -68,24 +71,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_weight="0.75"
+            android:layout_weight="0.7"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/mainpot2"
                 android:layout_width="wrap_content"
                 android:layout_height="238dp"
-                android:src="@drawable/thirdpot"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/forth_1monthpot"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/mainpotBtn2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
+                android:background="@drawable/woodtexture"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/round_button"
+                android:layout_marginBottom="20dp"
                 android:text="Jiny" />
         </LinearLayout>
 
@@ -100,17 +105,19 @@
                 android:id="@+id/mainpot3"
                 android:layout_width="wrap_content"
                 android:layout_height="238dp"
+                android:layout_marginBottom="30dp"
                 android:src="@drawable/secondpot"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/mainpotBtn3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:background="@drawable/woodtexture"
                 android:layout_weight="1"
-                android:background="@drawable/round_button"
+                android:layout_marginBottom="20dp"
                 android:text="Londo" />
         </LinearLayout>
 
@@ -131,12 +138,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:id="@+id/waterbtn"
+        android:layout_width="101dp"
+        android:layout_height="63dp"
         android:layout_gravity="bottom|center"
-        android:background="#911B1B"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/float_button"
         android:text="물주기"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

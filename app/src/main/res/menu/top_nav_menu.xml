@@ -2,13 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/setting_btn"
+    <item
+        android:id="@+id/menu_myprofile"
+        android:title="내정보"
+        android:icon="@drawable/ic_baseline_person_24"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_settings"
+        android:title="설정"
         android:icon="@drawable/ic_baseline_settings_24"
-        android:title="setting"
         app:showAsAction="always" />
-    <item android:title="모드 변경"
-        android:id="@+id/modechange" />
-    <item android:title="내 정보"
-        android:id="@+id/myprofile" />
 
 </menu>
