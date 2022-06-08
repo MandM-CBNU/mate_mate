@@ -1,45 +1,17 @@
 package com.example.meetandmeet;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
-import android.widget.Toolbar;
-
-import android.view.View;
 import android.widget.ActionMenuView;
-import android.widget.Button;
-import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.meetandmeet.ui.flower_detail.Flower_DetailFragment;
-import com.example.meetandmeet.ui.home.HomeFragment;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
-import java.net.HttpCookie;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.HashMap;
 
 
 public class MainActivity extends AppCompatActivity {

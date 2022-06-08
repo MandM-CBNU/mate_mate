@@ -62,6 +62,13 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        mainpo21Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((MainActivity)getActivity()).replaceFragment(new Flower_DetailFragment());
+            }
+        });
+
         intent1 = getContext().getPackageManager().getLaunchIntentForPackage(packageName);
         waterbtn.setOnClickListener(new View.OnClickListener() {
             @Override

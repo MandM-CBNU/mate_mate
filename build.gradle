@@ -12,9 +12,6 @@ buildscript {
     }
 }
 
-    }
-}
-
 plugins {
     id 'com.android.application' version '7.1.2' apply false
     id 'com.android.library' version '7.1.2' apply false
@@ -23,13 +20,16 @@ plugins {
 allprojects {
     repositories {
         // Check that you have the following line (if not, add it):
-        google()  // Google's Maven repository
-        //tag 관련
-        maven { url "https://jitpack.io" }
-    }
+        maven {
+            url "https://www.jitpack.io"
+        }
+        maven {
+            url 'https://maven.google.com/'
+        }
         mavenCentral()
     }
 }
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
