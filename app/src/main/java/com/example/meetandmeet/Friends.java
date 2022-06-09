@@ -7,12 +7,17 @@ public class Friends {
     public String name;
     public String phone;
     public String birth;
+    public String bmark;
 
     public Friends() { }
     public Friends(String name, String phone, String birth) {
         this.name = name;
         this.phone = phone;
         this.birth = birth;
+    }
+
+    public Friends(String bmark) {
+        this.bmark = bmark;
     }
 
     public void setName(String name) {
@@ -27,6 +32,10 @@ public class Friends {
         this.birth = birth;
     }
 
+    public void setBMark(String birth) {
+        this.bmark = bmark;
+    }
+
     public String getName() {
         return name;
     }
@@ -39,12 +48,17 @@ public class Friends {
         return birth;
     }
 
+    public String getBMark() {
+        return bmark;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
                 ", phone='" + phone + '\'' +
-                ", birth=" + birth +
+                ", birth='" + birth + '\'' +
+                ", bmark=" + bmark +
                 '}';
     }
 }
