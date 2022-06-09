@@ -45,8 +45,8 @@ public class GardenViewAdapter extends RecyclerView.Adapter<GardenViewAdapter.Ho
 
         holder.garden_img.setImageResource(list.get(itemposition).imgResId);
         holder.garden_name.setText(list.get(itemposition).name);
-        holder.garden_email.setText(list.get(itemposition).email);
-        holder.garden_intro.setText(list.get(itemposition).intro);
+        holder.garden_birth.setText(list.get(itemposition).birth);
+        holder.garden_phone.setText(list.get(itemposition).phone);
         Log.e("Garden","onBindViewHolder"+itemposition);
     }
 
@@ -63,15 +63,15 @@ public class GardenViewAdapter extends RecyclerView.Adapter<GardenViewAdapter.Ho
     public class Holder extends RecyclerView.ViewHolder {
         public ImageView garden_img;
         public TextView garden_name;
-        public TextView garden_email;
-        public TextView garden_intro;
+        public TextView garden_birth;
+        public TextView garden_phone;
 
         public Holder(View view) {
             super(view);
             garden_img = (ImageView) view.findViewById(R.id.garden_img);
             garden_name = (TextView) view.findViewById(R.id.garden_name);
-            garden_email = (TextView) view.findViewById(R.id.garden_email);
-            garden_intro = (TextView) view.findViewById(R.id.garden_intro);
+            garden_birth = (TextView) view.findViewById(R.id.garden_birth);
+            garden_phone = (TextView) view.findViewById(R.id.garden_phone);
         }
     }
 }
