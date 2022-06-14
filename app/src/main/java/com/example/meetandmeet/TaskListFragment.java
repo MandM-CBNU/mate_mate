@@ -91,35 +91,7 @@ public class TaskListFragment extends Fragment {
 //            getParentFragmentManager().beginTransaction().replace(R.id.framelayout,detailsFragment).addToBackStack(null).commit();
 //        });
         list = createFriendsList();
-
-<<<<<<< Updated upstream
-
-        list.add(new Item("이진희 씨의 화분",
-                "010-3407-1511",
-                "2020/06/07",
-                50,
-                R.drawable.firstpot));
-        list.add(new Item("이민희 씨의 화분",
-                "010-2315-1632",
-                "2000/05/04",
-                30,
-                R.drawable.secondpot));
-        list.add(new Item("임수연 씨의 화분",
-                "456-654-6545",
-                "2006/56/89",
-                45,
-                R.drawable.thirdpot));
-        list.add(new Item("서민정 씨의 화분",
-                "121-654-6542",
-                "2007/06/08",
-                90,
-                R.drawable.forth_1monthpot));
-
-
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(list);
-=======
         adapter = new RecyclerViewAdapter(list);
->>>>>>> Stashed changes
         binding.recyclerView.setAdapter(adapter);
         adapter.setListener((v,position) -> {
             viewModel.setSelected(adapter.getItemAt(position));
