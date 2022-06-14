@@ -4,6 +4,7 @@ buildscript {
     repositories {
         // Check that you have the following line (if not, add it):
         google()  // Google's Maven repository
+        jcenter()
 
     }
     dependencies {
@@ -22,8 +23,10 @@ allprojects {
         // Check that you have the following line (if not, add it):
         google()  // Google's Maven repository
         //tag 관련
-        maven { url "https://jitpack.io" }
+        jcenter()
+        maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
         mavenCentral()
+
     }
 }
 

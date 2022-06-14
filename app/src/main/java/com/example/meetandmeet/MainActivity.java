@@ -1,29 +1,32 @@
 package com.example.meetandmeet;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import android.widget.ActionMenuView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-    ActionMenuView actionMenuView;
+    private Intent intent1;
+    private final String packageName = "com.kakao.talk";
+    private TaskListFragment taskListFragment = new TaskListFragment();
+
 
     // FrameLayout에 각 메뉴의 Fragment를 바꿔 줌
     FragmentManager fragmentManager = getSupportFragmentManager();
     FragmentTransaction fragmentTransaction;
 
     // 3개의 메뉴에 들어갈 Fragment들
-    HomeFragment homeFragment = new HomeFragment();
+    TaskListFragment homeFragment = new TaskListFragment();
     GardenFragment gardenFragment = new GardenFragment();
     Flower_InfoFragment flower_infoFragment = new Flower_InfoFragment();
 
@@ -31,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         bottomNavigationView = findViewById(R.id.nav_view);
 
@@ -47,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
-                        replaceFragment(new HomeFragment());
+                        replaceFragment(new TaskListFragment());
                         break;
                     case R.id.navigation_garden:
                         replaceFragment(new GardenFragment());
@@ -55,9 +59,11 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.navigation_flower_info:
                         replaceFragment(new Flower_InfoFragment());
                         break;
+
                     case R.id.navigation_calendar:
                         replaceFragment(new CalendarFragment());
                         break;
+
 
                 }
                 return true;
@@ -73,10 +79,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_myprofile:
-                replaceFragment(new MyProfile_Fragment());
+                replaceFragment(new BookmarkFragment());
                 return true;
             case R.id.menu_settings:
-                replaceFragment(new SettingFragment());
+                replaceFragment(new Get_FriendData());
                 return true;
         }
         return super.onOptionsItemSelected(item);

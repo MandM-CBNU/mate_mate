@@ -12,10 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="0.3in"
         android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-black"
         android:text="친구 ++\n정보 입력"
-        android:textSize="0.24in"
         android:textColor="@color/purple_200"
-        android:fontFamily="sans-serif-black"/>
+        android:textSize="0.24in" />
 
     <EditText
         android:id="@+id/name"
