@@ -93,7 +93,7 @@ public class Get_FriendData extends Fragment {
 //                        // Commit the transaction
 //                        transaction.commit();
 
-                        Fragment fragment = new HomeFragment();
+                        Fragment fragment = new TaskListFragment();
 
                         FragmentManager fragmentManager = getParentFragmentManager();
 
