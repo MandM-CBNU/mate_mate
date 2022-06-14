@@ -47,14 +47,23 @@
         <entry key="..\:/Users/User/mate_2/app/src/main/res/menu/top_nav_menu.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/drawable/square.xml" value="0.1" />
         <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/drawable/swip_tip.xml" value="0.1" />
+        <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/drawable/swipe_tip.xml" value="0.1" />
         <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/drawable/swipe_tip_back.xml" value="0.1" />
-        <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/layout/fragment_calendar.xml" value="0.1796875" />
-        <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/layout/fragment_flower_detail.xml" value="0.17757009345794392" />
+        <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/drawable/text_border.xml" value="0.1" />
+        <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/layout/edit_dialog.xml" value="0.4344335414808207" />
+        <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/layout/flwr_dialog.xml" value="0.13541666666666666" />
+        <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/layout/fragment_calendar.xml" value="0.1" />
+        <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/layout/fragment_details.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/layout/fragment_flower_detail.xml" value="0.1" />
         <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/layout/fragment_flower_info.xml" value="0.1109375" />
         <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/layout/fragment_get_frienddata.xml" value="0.17447916666666666" />
         <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/layout/fragment_my_profile_.xml" value="0.17447916666666666" />
         <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/layout/fragment_select__pot.xml" value="0.17447916666666666" />
+        <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/layout/fragment_setting.xml" value="0.11510416666666666" />
+        <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/layout/fragment_test.xml" value="0.11510416666666666" />
         <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/layout/layoutlayout.xml" value="0.17753623188405798" />
+        <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/layout/tag_ex.xml" value="0.1" />
+        <entry key="..\:/Users/seomi/AndroidStudioProjects/MandM/app/src/main/res/layout/task_list_item.xml" value="0.23177083333333334" />
         <entry key="..\:/Users/yimso/Downloads/22_OpenSrcSWProPrjClass/mate_mate/app/src/main/res/layout/flwr_dialog.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/yimso/Downloads/22_OpenSrcSWProPrjClass/mate_mate/app/src/main/res/layout/fragment_flower_info.xml" value="0.264" />
         <entry key="..\:/Users/yimso/Downloads/22_OpenSrcSWProPrjClass/mate_mate/app/src/main/res/layout/fragment_garden.xml" value="0.1265625" />

@@ -1,55 +1,72 @@
 package com.example.meetandmeet;
 
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ProgressBar;
+import android.widget.TextView;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 
 public class CalendarFragment extends Fragment {
-    @Nullable
-    private ProgressBar prg;
-    private Button decrease;
-    private Button increase;
-    private int int_ventilator;
+    private static final String DATE_TEMPLATE = "dd/MM/yyyy";
+    private static final String MONTH_TEMPLATE = "yyyy mmmm";
+    private TextView textView;
+    public io.blackbox_vision.materialcalendarview.view.CalendarView calendarView;
     @Override
-
     public View onCreateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container, @NonNull Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_calendar,container,false);
-        prg = (ProgressBar) rootView.findViewById(R.id.progressBar);
-        decrease = (Button) rootView.findViewById(R.id.decrease);
-        increase = (Button) rootView.findViewById(R.id.increase);
-        decrease.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(int_ventilator > 0){
-                    int_ventilator=int_ventilator-5;
-                }
-                prg.setProgress(int_ventilator);
-                prg.getProgressDrawable().setColorFilter(
-                        Color.YELLOW, android.graphics.PorterDuff.Mode.SRC_IN);
-            }
-        });
-        increase.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(int_ventilator <100) {
-                    int_ventilator = int_ventilator + 5;
-                }
-                prg.setProgress(int_ventilator);
-                prg.getProgressDrawable().setColorFilter(
-                        Color.RED, android.graphics.PorterDuff.Mode.SRC_IN);
-            }
-        });
+
+        calendarView = (io.blackbox_vision.materialcalendarview.view.CalendarView) rootView.findViewById(R.id.calendar_view);
+        textView=(TextView)rootView.findViewById(R.id.textview);
+
+        calendarView.shouldAnimateOnEnter(true)
+                .setFirstDayOfWeek(Calendar.SUNDAY)
+                .setOnDateClickListener(this::onDateClick)
+                .setOnMonthChangeListener(this::onMonthChange)
+                .setOnDateLongClickListener(this::onDateLongClick)
+                .setOnMonthTitleClickListener(this::onMonthTitleClick);
+
+        if (calendarView.isMultiSelectDayEnabled()) {
+            calendarView.setOnMultipleDaySelectedListener(this::onMultipleDaySelected);
+        }
+        calendarView.update(Calendar.getInstance(Locale.getDefault()));
+        textView.setText(String.format("Today is %s", formatDate(DATE_TEMPLATE, new Date(System.currentTimeMillis()))));
         Log.e("Frag","CalendarFragment");
         return rootView;
+
+    }
+
+    private void onMultipleDaySelected(int i, List<Date> dates) {
+    }
+
+    private void onMonthTitleClick(Date date) {
+    }
+
+    private void onDateLongClick(Date date) {
+        textView.setText(formatDate(DATE_TEMPLATE, date));
+    }
+
+    private void onMonthChange(Date date) {
+
+    }
+    private String formatDate(@NonNull String dateTemplate, @NonNull Date date) {
+        return new SimpleDateFormat(dateTemplate, Locale.getDefault()).format(date);
+    }
+    private void onDateClick(Date date) {
+        textView.setText(formatDate(DATE_TEMPLATE, date));
+    }
+
+    public void prepareTextView() {
+        textView.setText(String.format("Today is %s", formatDate(DATE_TEMPLATE, new Date(System.currentTimeMillis()))));
     }
 }

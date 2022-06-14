@@ -3,43 +3,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CalendarFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blackOlive">
 
-    <Button
-        android:id="@+id/decrease"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:onClick="selectVentilatorFunction"
-        android:text="DEC" />
-
-    <Button
-        android:id="@+id/increase"
-        android:layout_gravity="right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="selectVentilatorFunction"
-        android:text="INC" />
-
-    <androidx.cardview.widget.CardView
+    <io.blackbox_vision.materialcalendarview.view.CalendarView
+        android:id="@+id/calendar_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        app:calendarBackgroundColor="@color/blackOlive"
+        app:calendarTitleTextColor="@color/teal_200"
+        app:calendarCurrentDayTextColor="#F9F871"
+        app:calendarSelectedDayTextColor="@color/white"
+        app:calendarDayOfWeekTextColor="#757575"
+        app:calendarDayOfMonthTextColor="@android:color/white"
+        app:calendarDisabledDayBackgroundColor="@color/blackOlive"
+        app:calendarDisabledDayTextColor="@android:color/darker_gray"
+        app:calendarSelectedDayBackgroundColor="#009688"
+        app:calendarTitleBackgroundColor="@color/blackOlive"
+        app:calendarWeekBackgroundColor="@color/blackOlive"
+        app:calendarCurrentDayBackgroundColor="#009688"
+        app:calendarWeekendTextColor="#ed2121"
+        app:calendarButtonBackgroundColor="@color/teal_200"
+        app:calendarWeekendDays="saturday|sunday">
+    </io.blackbox_vision.materialcalendarview.view.CalendarView>
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|bottom"
-            android:layout_marginBottom="70dp"
-            android:text="레벨이 적힐 TEXTVIEW 입니다." />
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="371dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center|bottom"
-            android:scaleY="4" />
-    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center|bottom"
+        android:layout_margin="15dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:padding="15dp"/>
 </FrameLayout>

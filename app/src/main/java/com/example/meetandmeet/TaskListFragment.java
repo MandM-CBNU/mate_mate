@@ -63,23 +63,23 @@ public class TaskListFragment extends Fragment {
         list.add(new Item("이진희 씨의 화분",
                 "010-3407-1511",
                 "2020/06/07",
-                0,
+                50,
                 R.drawable.firstpot));
         list.add(new Item("이민희 씨의 화분",
                 "010-2315-1632",
                 "2000/05/04",
-                0,
-                R.drawable.firstpot));
+                30,
+                R.drawable.secondpot));
         list.add(new Item("임수연 씨의 화분",
                 "456-654-6545",
                 "2006/56/89",
-                0,
-                R.drawable.firstpot));
+                45,
+                R.drawable.thirdpot));
         list.add(new Item("서민정 씨의 화분",
                 "121-654-6542",
                 "2007/06/08",
-                0,
-                R.drawable.firstpot));
+                90,
+                R.drawable.forth_1monthpot));
 
 
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(list);

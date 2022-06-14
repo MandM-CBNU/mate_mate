@@ -8,6 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="darkGreen">#4C8077</color>
+    <color name="lightBlue">#C1FCF6</color>
+    <color name="lightYellow">#FEFEDF</color>
+
+
     //tag 관련 color
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
@@ -15,4 +20,7 @@
     <color name="blackOlive">#39393F</color>
     <color name="orange">#FEC500</color>
     <color name="bg_tag_default">#7cd167</color>
+
+    <color name="colorSelectedDayBG">#f1f4f9</color>
+
 </resources>

@@ -14,7 +14,7 @@ import java.net.PortUnreachableException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GardenViewAdapter extends RecyclerView.Adapter<GardenViewAdapter.Holder> {
+public class   GardenViewAdapter extends RecyclerView.Adapter<GardenViewAdapter.Holder> {
 
     private Context context;
     private List<itemVO> list = new ArrayList<>();

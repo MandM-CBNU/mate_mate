@@ -34,9 +34,13 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    dataBinding{
+        enabled = true;
+    }
     buildFeatures {
         viewBinding true
     }
+
 
 }
 
@@ -51,6 +55,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.4.2'
     implementation 'com.google.android.material:material:1.7.0-alpha01'
     implementation 'androidx.mediarouter:mediarouter:1.3.0'
+    implementation "android.arch.lifecycle:extensions:1.1.1"
     //추가
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0'
     //viewpager2
@@ -58,16 +63,32 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'com.google.firebase:firebase-database:20.0.0'
+    implementation 'com.google.firebase:firebase-database:20.0.5'
     testImplementation 'junit:junit:4.13.2'
-    testImplementation 'org.junit.jupiter:junit-jupiter'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
+
+    implementation "com.kakao.sdk:v2-user:2.1.0" // 카카오 로그인
+    implementation "com.kakao.sdk:v2-talk:2.1.0" // 친구, 메시지(카카오톡)
+    implementation "com.kakao.sdk:v2-story:2.1.0" // 카카오스토리
+    implementation "com.kakao.sdk:v2-link:2.1.0" // 메시지(카카오링크)
+    implementation "com.kakao.sdk:v2-navi:2.1.0" // 카카오네비
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.20"
+
+
     //slidingUpPanel
     implementation 'com.sothree.slidinguppanel:library:3.4.0'
-    //tag 관련
-    implementation 'com.github.mabbas007:TagsEditText:1.0.5'
+    //circleImageVeiw
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //progressbar
+    implementation 'com.github.iammert:TileProgressView:0.1'
+    //tag
+    implementation 'com.google.android:flexbox:1.0.0'
+    implementation 'com.github.mahimrocky:TagView:1.0.3'
+    //calendar
+    implementation'com.github.BlackBoxVision:material-calendar-view:v1.5.8'
 
     //firebase
     // Import the Firebase BoM
