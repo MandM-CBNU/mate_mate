@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     FragmentTransaction fragmentTransaction;
 
     // 3개의 메뉴에 들어갈 Fragment들
-    HomeFragment homeFragment = new HomeFragment();
+    TaskListFragment homeFragment = new TaskListFragment();
     GardenFragment gardenFragment = new GardenFragment();
     Flower_InfoFragment flower_infoFragment = new Flower_InfoFragment();
 
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
-                        replaceFragment(new HomeFragment());
+                        replaceFragment(new TaskListFragment());
                         break;
                     case R.id.navigation_garden:
                         replaceFragment(new GardenFragment());
@@ -64,10 +64,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.navigation_calendar:
-                        //getSupportFragmentManager().beginTransaction().add(R.id.framelayout,taskListFragment)
-                        //.addToBackStack("task_list")
-                        // .commit();
-                        replaceFragment(new TaskListFragment());
+                        replaceFragment(new CalendarFragment());
                         break;
 
 
