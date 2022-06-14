@@ -65,14 +65,14 @@ public class Get_FriendData extends Fragment {
                 result.put("phone", getUserPhone);
                 result.put("birth", getUserBirth);
 
-                writeFriend(Integer.toString(++var_friend.i), getUserName, getUserPhone, getUserBirth);
+                writeFriend(Integer.toString(++var_friend.i), getUserName, getUserPhone, getUserBirth,R.drawable.blankpot,10);
             }
         });
 
         return rootView;
     }
-    private void writeFriend(String userId, String name, String phone, String birth) {
-        Friends friend = new Friends(name, phone, birth);
+    private void writeFriend(String userId, String name, String phone, String birth, int imgUrl, int progressNum) {
+        Friends friend = new Friends(name, phone, birth,imgUrl,progressNum);
 
         //데이터 저장
         mDatabase.child("Friends").child(userId).setValue(friend)

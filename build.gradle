@@ -24,6 +24,7 @@ allprojects {
         //tag 관련
         maven { url "https://jitpack.io" }
         mavenCentral()
+
     }
 }
 

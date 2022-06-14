@@ -8,12 +8,16 @@ public class Friends {
     public String phone;
     public String birth;
     public String bmark;
+    public  int imgUrl;
+    public int progressNum;
 
     public Friends() { }
-    public Friends(String name, String phone, String birth) {
+    public Friends(String name, String phone, String birth, int imgUrl, int progressNum) {
         this.name = name;
         this.phone = phone;
         this.birth = birth;
+        this.imgUrl= imgUrl;
+        this.progressNum =progressNum;
     }
 
     public Friends(String bmark) {
@@ -32,9 +36,13 @@ public class Friends {
         this.birth = birth;
     }
 
-    public void setBMark(String birth) {
+    public void setBMark(String bmark) {
         this.bmark = bmark;
     }
+
+    public int setImgUrl(int imgUrl) {return imgUrl;}
+
+    public int setProgressNum(int progressNum){return progressNum;}
 
     public String getName() {
         return name;
@@ -51,6 +59,10 @@ public class Friends {
     public String getBMark() {
         return bmark;
     }
+
+    public int getImgUrl(){return imgUrl;}
+
+    public int getProgressNum(){return progressNum;}
 
     @Override
     public String toString() {
