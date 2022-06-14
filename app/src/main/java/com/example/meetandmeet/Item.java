@@ -8,6 +8,8 @@ public class Item {
     private int prograssBar;
     private int image;
 
+    public Item(){}
+
     public Item(String name, String phone, String birthday, int prograssBar, int image) {
         this.name = name;
         this.phone = phone;

@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -11,10 +13,11 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.meetandmeet.databinding.TaskListItemBinding;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
-    private List<Item> list;
+    private ArrayList<Item> list;
     private OnItemClickListener listener;
     private Intent intent1;
     private final String packageName = "com.kakao.talk";
@@ -28,7 +31,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
 
-    public RecyclerViewAdapter(List<Item> list){
+    public RecyclerViewAdapter(ArrayList<Item> list){
         this.list =list;
     }
     public void setListener(OnItemClickListener listener){
@@ -147,4 +150,5 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             listener.onClick(v,getAdapterPosition());
         }
     }
+
 }
