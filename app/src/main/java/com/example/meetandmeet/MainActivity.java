@@ -79,10 +79,10 @@ public class MainActivity extends AppCompatActivity {
 
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.menu_myprofile:
+            case R.id.menu_bookmark:
                 replaceFragment(new BookmarkFragment());
                 return true;
-            case R.id.menu_settings:
+            case R.id.menu_addpot:
                 replaceFragment(new Get_FriendData());
                 return true;
         }

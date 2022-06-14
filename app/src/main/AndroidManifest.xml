@@ -8,12 +8,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MeetandMeet">
+        android:theme="@style/Theme.MeetandMeet" >
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:windowSoftInputMode="adjustPan">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,49 +20,44 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
-
+    <!-- 인터넷 접속 퍼미션 설정 -->
     <!--
-    <?xml version="1.0" encoding="utf-8"?>
-    <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.example.meetandmeet">
+    <uses-permission android:name="android.permission.INTERNET" />
 
-        /* 인터넷 접속 퍼미션 설정 */
-        <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:name=".KakaoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MeetandMeet">
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
 
-        <application
-            android:name=".KakaoApplication"
-            android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name"
-            android:roundIcon="@mipmap/ic_launcher_round"
-            android:supportsRtl="true"
-            android:theme="@style/Theme.MeetandMeet">
-            <activity
-                android:name=".LoginActivity"
-                android:exported="true"
-                android:label="@string/app_name">
-                <intent-filter>
-                    <action android:name="android.intent.action.MAIN" />
-                    <category android:name="android.intent.category.LAUNCHER" />
-                </intent-filter>
-            </activity>
-            <activity android:name=".MainActivity">
-            </activity>
-            <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
-                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:host="oauth"
+                    android:scheme="kakao71a2ce3e4820ac98b623253291f34d07" />
+            </intent-filter>
+        </activity>
 
-                <intent-filter>
-                    <action android:name="android.intent.action.VIEW" />
-                    <category android:name="android.intent.category.DEFAULT" />
-                    <category android:name="android.intent.category.BROWSABLE" />
+    </application>
 
-                    <data android:host="oauth"
-                        android:scheme="kakao71a2ce3e4820ac98b623253291f34d07" />
-                </intent-filter>
-            </activity>
-
-        </application>
-
-    </manifest>
-    -->
+</manifest>
+-->

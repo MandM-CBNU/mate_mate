@@ -43,6 +43,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         TaskListItemBinding binding = DataBindingUtil.inflate(inflater,R.layout.task_list_item,parent,false);
+        context = parent.getContext();
 
         return new ViewHolder(binding);
     }
@@ -58,10 +59,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.binding.waterpotBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { //한번하고 사라지네 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+                intent1 = context.getPackageManager().getLaunchIntentForPackage(packageName);
                 if(position == 0) {
                     add+=5;
-                    //intent1 = context.getPackageManager().getLaunchIntentForPackage(packageName);
-                    // ((MainActivity)context).startActivity(intent1);
+                     ((MainActivity)context).startActivity(intent1);
                     holder.binding.progressBar.setProgress(list.get(position).getPrograssBar()+add);
                     Toast.makeText(v.getContext(), "1번이 작동중", Toast.LENGTH_SHORT).show();
                     if(holder.binding.progressBar.getProgress() >= 1 && holder.binding.progressBar.getProgress() < 20){
