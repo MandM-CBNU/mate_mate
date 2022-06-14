@@ -15,6 +15,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MainActivity";
     BottomNavigationView bottomNavigationView;
     private Intent intent1;
     private final String packageName = "com.kakao.talk";
@@ -92,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
     public void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+
 
         //프래그먼트 화면 전환시 애니매이션
         //fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right,R.anim.enter_from_right,R.anim.enter_from_right);
