@@ -4,11 +4,10 @@
     <item android:state_pressed="false">
         <shape>
             <!-- 배경 -->
-            <solid android:color="#CC9047" />
-            <!-- 테두리 -->
-            <stroke
-                android:width="3dp"
-                android:color="#7A500B" />
+            <solid android:color="#D385F4" />
+            <!-- 테두리 --> <stroke
+            android:width="3dp"
+            android:color="#8D4ABC" />
             <corners
                 android:bottomLeftRadius="8dp"
                 android:bottomRightRadius="8dp"
@@ -19,11 +18,11 @@
     <!-- 클릭했을 때 -->
     <item android:state_pressed="true">
         <shape> <!-- 배경 -->
-            <solid android:color="#704F26" />
+            <solid android:color="#6A1DE8" />
             <!-- 테두리 -->
             <stroke
                 android:width="3dp"
-                android:color="#301F03" />
+                android:color="#1F0C4C" />
             <!-- 코너 둥근 정도 -->
             <corners
                 android:bottomLeftRadius="8dp"
