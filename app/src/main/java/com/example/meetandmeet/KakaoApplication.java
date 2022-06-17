@@ -1,5 +1,5 @@
 package com.example.meetandmeet;
-
+/// 코드 작성자 2019038084 이민희 ///
 import android.app.Application;
 
 import com.kakao.sdk.common.KakaoSdk;

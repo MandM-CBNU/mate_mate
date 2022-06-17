@@ -12,7 +12,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
+/// 코드 작성자 2020069049 이진희 ///
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";

@@ -15,7 +15,7 @@ import com.example.meetandmeet.databinding.TaskListItemBinding;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/// 코드 작성자 2020069049 이진희 ///
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     private ArrayList<Item> list;
     private OnItemClickListener listener;
@@ -61,7 +61,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.binding.flowerpotIv.setImageResource(list.get(position).getImage());
         holder.binding.waterpotBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { //한번하고 사라지네 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+            public void onClick(View v) {
                 intent1 = context.getPackageManager().getLaunchIntentForPackage(packageName);
                 if(position == 0) {
                     add+=5;
@@ -85,45 +85,183 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 }
                 else if(position == 1){
                     add+=5;
+                    ((MainActivity)context).startActivity(intent1);
                     holder.binding.progressBar.setProgress(list.get(position).getPrograssBar()+add);
-
                     Toast.makeText(v.getContext(), "2번이 작동중", Toast.LENGTH_SHORT).show();
+                    if(holder.binding.progressBar.getProgress() >= 1 && holder.binding.progressBar.getProgress() < 20){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.firstpot);}
+                    else if(holder.binding.progressBar.getProgress() >=20  && holder.binding.progressBar.getProgress() < 40){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=40  && holder.binding.progressBar.getProgress() < 60){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=60  && holder.binding.progressBar.getProgress() < 80){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.thirdpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=80  && holder.binding.progressBar.getProgress() < 100){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.forth_1monthpot);
+                    }
                 }
                 else if(position ==2){
                     add+=5;
+                    ((MainActivity)context).startActivity(intent1);
                     holder.binding.progressBar.setProgress(list.get(position).getPrograssBar()+add);
-
                     Toast.makeText(v.getContext(), "3번이 작동중", Toast.LENGTH_SHORT).show();
+                    if(holder.binding.progressBar.getProgress() >= 1 && holder.binding.progressBar.getProgress() < 20){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.firstpot);}
+                    else if(holder.binding.progressBar.getProgress() >=20  && holder.binding.progressBar.getProgress() < 40){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=40  && holder.binding.progressBar.getProgress() < 60){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=60  && holder.binding.progressBar.getProgress() < 80){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.thirdpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=80  && holder.binding.progressBar.getProgress() < 100){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.forth_1monthpot);
+                    }
                 }
                 else if(position ==3){
                     add+=5;
+                    ((MainActivity)context).startActivity(intent1);
                     holder.binding.progressBar.setProgress(list.get(position).getPrograssBar()+add);
                     Toast.makeText(v.getContext(), "4번이 작동중", Toast.LENGTH_SHORT).show();
+                    if(holder.binding.progressBar.getProgress() >= 1 && holder.binding.progressBar.getProgress() < 20){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.firstpot);}
+                    else if(holder.binding.progressBar.getProgress() >=20  && holder.binding.progressBar.getProgress() < 40){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=40  && holder.binding.progressBar.getProgress() < 60){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=60  && holder.binding.progressBar.getProgress() < 80){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.thirdpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=80  && holder.binding.progressBar.getProgress() < 100){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.forth_1monthpot);
+                    }
                 }
                 else if(position ==4){
                     add+=5;
+                    ((MainActivity)context).startActivity(intent1);
                     holder.binding.progressBar.setProgress(list.get(position).getPrograssBar()+add);
                     Toast.makeText(v.getContext(), "5번이 작동중", Toast.LENGTH_SHORT).show();
+                    if(holder.binding.progressBar.getProgress() >= 1 && holder.binding.progressBar.getProgress() < 20){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.firstpot);}
+                    else if(holder.binding.progressBar.getProgress() >=20  && holder.binding.progressBar.getProgress() < 40){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=40  && holder.binding.progressBar.getProgress() < 60){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=60  && holder.binding.progressBar.getProgress() < 80){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.thirdpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=80  && holder.binding.progressBar.getProgress() < 100){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.forth_1monthpot);
+                    }
                 }
                 else if(position ==5){
+                    add+=5;
+                    ((MainActivity)context).startActivity(intent1);
                     holder.binding.progressBar.setProgress(list.get(position).getPrograssBar()+add);
                     Toast.makeText(v.getContext(), "6번이 작동중", Toast.LENGTH_SHORT).show();
+                    if(holder.binding.progressBar.getProgress() >= 1 && holder.binding.progressBar.getProgress() < 20){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.firstpot);}
+                    else if(holder.binding.progressBar.getProgress() >=20  && holder.binding.progressBar.getProgress() < 40){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=40  && holder.binding.progressBar.getProgress() < 60){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=60  && holder.binding.progressBar.getProgress() < 80){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.thirdpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=80  && holder.binding.progressBar.getProgress() < 100){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.forth_1monthpot);
+                    }
                 }
                 else if(position ==6){
+                    add+=5;
+                    ((MainActivity)context).startActivity(intent1);
                     holder.binding.progressBar.setProgress(list.get(position).getPrograssBar()+add);
                     Toast.makeText(v.getContext(), "7번이 작동중", Toast.LENGTH_SHORT).show();
+                    if(holder.binding.progressBar.getProgress() >= 1 && holder.binding.progressBar.getProgress() < 20){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.firstpot);}
+                    else if(holder.binding.progressBar.getProgress() >=20  && holder.binding.progressBar.getProgress() < 40){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=40  && holder.binding.progressBar.getProgress() < 60){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=60  && holder.binding.progressBar.getProgress() < 80){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.thirdpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=80  && holder.binding.progressBar.getProgress() < 100){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.forth_1monthpot);
+                    }
                 }
                 else if(position ==7){
+                    add+=5;
+                    ((MainActivity)context).startActivity(intent1);
                     holder.binding.progressBar.setProgress(list.get(position).getPrograssBar()+add);
                     Toast.makeText(v.getContext(), "8번이 작동중", Toast.LENGTH_SHORT).show();
+                    if(holder.binding.progressBar.getProgress() >= 1 && holder.binding.progressBar.getProgress() < 20){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.firstpot);}
+                    else if(holder.binding.progressBar.getProgress() >=20  && holder.binding.progressBar.getProgress() < 40){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=40  && holder.binding.progressBar.getProgress() < 60){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=60  && holder.binding.progressBar.getProgress() < 80){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.thirdpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=80  && holder.binding.progressBar.getProgress() < 100){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.forth_1monthpot);
+                    }
                 }
                 else if(position ==8){
+                    add+=5;
+                    ((MainActivity)context).startActivity(intent1);
                     holder.binding.progressBar.setProgress(list.get(position).getPrograssBar()+add);
                     Toast.makeText(v.getContext(), "9번이 작동중", Toast.LENGTH_SHORT).show();
+                    if(holder.binding.progressBar.getProgress() >= 1 && holder.binding.progressBar.getProgress() < 20){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.firstpot);}
+                    else if(holder.binding.progressBar.getProgress() >=20  && holder.binding.progressBar.getProgress() < 40){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=40  && holder.binding.progressBar.getProgress() < 60){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=60  && holder.binding.progressBar.getProgress() < 80){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.thirdpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=80  && holder.binding.progressBar.getProgress() < 100){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.forth_1monthpot);
+                    }
                 }
                 else if(position ==9){
+                    add+=5;
+                    ((MainActivity)context).startActivity(intent1);
                     holder.binding.progressBar.setProgress(list.get(position).getPrograssBar()+add);
-                    Toast.makeText(v.getContext(), "9번이 작동중", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(), "10번이 작동중", Toast.LENGTH_SHORT).show();
+                    if(holder.binding.progressBar.getProgress() >= 1 && holder.binding.progressBar.getProgress() < 20){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.firstpot);}
+                    else if(holder.binding.progressBar.getProgress() >=20  && holder.binding.progressBar.getProgress() < 40){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=40  && holder.binding.progressBar.getProgress() < 60){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.secondpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=60  && holder.binding.progressBar.getProgress() < 80){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.thirdpot);
+                    }
+                    else if(holder.binding.progressBar.getProgress() >=80  && holder.binding.progressBar.getProgress() < 100){
+                        holder.binding.flowerpotIv.setImageResource(R.drawable.forth_1monthpot);
+                    }
                 }
             }
         });

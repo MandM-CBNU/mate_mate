@@ -1,5 +1,5 @@
 package com.example.meetandmeet;
-
+/// 코드 작성자 2020069049 이진희 ///
 import android.widget.Button;
 
 public class Item {

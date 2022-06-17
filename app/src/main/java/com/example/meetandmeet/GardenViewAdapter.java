@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class   GardenViewAdapter extends RecyclerView.Adapter<GardenViewAdapter.Holder> {
-
+    /// 코드 작성자 2020069049 이진희 ///
     private Context context;
     private List<itemVO> list = new ArrayList<>();
 

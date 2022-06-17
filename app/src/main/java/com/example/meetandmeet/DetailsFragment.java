@@ -1,5 +1,5 @@
 package com.example.meetandmeet;
-
+/// 코드 작성자 2020039085 서민정 ///
 import android.content.Context;
 import android.os.Bundle;
 

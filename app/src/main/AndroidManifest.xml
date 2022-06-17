@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.meetandmeet">
-
+<!--
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,8 +22,8 @@
     </application>
 
 </manifest>
+-->
     <!-- 인터넷 접속 퍼미션 설정 -->
-    <!--
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -60,4 +60,3 @@
     </application>
 
 </manifest>
--->
